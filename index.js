@@ -1,5 +1,6 @@
 const clientInfinity = document.querySelector('.client-infinity');
 const clientInner = document.querySelector('.client-inner');
+const Myimg = document.getElementById("Myimg");
 let isMouseOver = false;
 let startX;
 let scrollLeft;
@@ -81,4 +82,9 @@ function handleMouseMove(e) {
         clientInfinity.scrollLeft = scrollLeft - walk;
     }
 }
+
+//ONCLICK
+function myFunction() {
+    alert("aku adalah brand" + Myimg );
+  }
 

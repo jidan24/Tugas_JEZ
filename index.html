@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JEZ HomePage</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -37,17 +38,14 @@
     <!-- CAROUSEL START -->
     <div class="container my-5">
         <div class="row">
-            <!-- Column for Text -->
-            <div class="col-md-6 d-flex align-items-center">
-            </div>
             <!-- Column for Carousel -->
-            <div class="container my-5">
-                <div class="row">
                     <!-- Column for Text -->
-                    <div class="container-tx col-md-4 d-flex align-items-center">
+                    <div class="container my-1">
+                    <div class="container-tx col-md-4 my-6 d-flex">
                         <span class="text first-text">PT</span> &nbsp;&nbsp;
                         <span class="text sec-text">Zona Karya Nusantara</span>
                     </div>
+                   
                     <!-- Column for Image Slider -->
                     <div class="slider-container col-md-8">
                         <div class="slider-inner">
@@ -69,19 +67,23 @@
                             <span>&gt;</span>
                         </button>
                     </div>
+                    <!-- <div class="just-text">
+                        <h4 class="slider-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque delectus adipisci aliquam mollitia non vitae esse est dignissimos, explicabo ab atque provident commodi officiis. Fuga ipsum dolorem dolore minus pariatur.</h4>
+                    </div> -->
                 </div>
             </div>
+    </div>
     <!-- CAROUSEL END -->
 
     <!-- WHAT WE DO START -->
     <div class="container-fluid text-dark mt-2 mb-4 ml-3 mr-5">
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="/asset/sports2.jpg" class="img-fluid" alt="What We Do">
+            <div class="col-lg-6 mb-4 mt-1">
+                <img src="/asset/sneakers 2.jpg" alt="What We Do">
             </div>
             <div class="col-lg-6">
                 <h1>WHAT WE DO?</h1>
-                <ul>
+                <ul class="list-content">
                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates fugiat eos excepturi ex minus!</li>
                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates fugiat eos excepturi ex minus!</li>
                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates fugiat eos excepturi ex minus!</li>
@@ -97,7 +99,8 @@
         <h1>OUR CLIENTS</h1>
         <hr/>
         <div class="client-infinity">
-        <div class="client-inner">
+        <div id="Myimg" class="client-inner">
+            <a onclick="myFunction()">
             <img src="/asset/nineten.jpg"  alt="Client">
             <img src="/asset/Unerd.png"  alt="Client">
             <img src="/asset/Ventela.jpg"  alt="Client">
@@ -123,6 +126,7 @@
             <img src="/asset/specs.jpg"  alt="Client">
             <img src="/asset/1650270344.png"  alt="Client">
             <img src="/asset/910.jpg"  alt="Client">
+        </a>
           </div>
         </div>
     </div>
@@ -130,15 +134,47 @@
     <!-- OUR CLIENTS END -->
 
     <!-- OUR TEAM START -->
-    <div class="our-team text-center py-5">
-        <h1>Join Our Team</h1>
-        <img src="/asset/TEAM.jpg" class="img-fluid my-4" alt="team">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, reiciendis sequi officia libero eos nihil eveniet dolorum quasi repudiandae pariatur ipsum, sapiente voluptate quis tenetur quaerat. Tempora consectetur voluptas voluptatem.</h3>
-        <div class="content-button mt-4">
-            <button class="btn btn-outline-secondary">JEZ CAREER</button>
+    <div class="container">
+        <div class="row">
+          <div class="col-9 text-center">
+            <h1 class="h1-team">Join Our Team</h1>
+          </div>
+          <div class="col-4">
+            <img class="img-team" src="/asset/team.jpg" alt="team.jpg">
+          </div>
+          <div class="col-6">
+            <h4 class="text-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quod architecto perspiciatis, dolorum modi sit obcaecati possimus repellat dicta quisquam tenetur vel, similique suscipit praesentium rerum! Repellendus doloremque fugiat dignissimos.</h4>
+          </div>
         </div>
-    </div>
+      </div>
     <!-- OUR TEAM END -->
+      
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col footer-col">
+                    <h4>Location</h4>
+                </div>
+                <div class="col footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">work</a></li>
+                        <li><a href="#">service</a></li>
+                        <li><a href="#">team</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+                <div class="col footer-col">
+                    <h4>contact us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>

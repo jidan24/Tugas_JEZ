@@ -1,34 +1,122 @@
-@keyframes slide {
-    from{
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
+.logo-jez {
+    margin-left: 40px;
 }
-    to{
-        transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        -moz-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        -o-transform: translateX(-100%);
+
+.navbar-collapse img{
+    width: 2cap;
+    margin-right: 10px;
+    cursor: pointer;
 }
+
+.navbar-nav {
+    margin-right:100px;
+}
+
+.container-tx{
+    overflow: hidden;
+}
+
+.container-tx .text {
+    position: relative;
+    color:#E7473C;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.container-tx .text.first-text {
+    color: #9d9a9a;
+}
+
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #E7473C;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+/* .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  } */
+
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slider-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    min-width: 100%;
+    user-select: none;
+}
+
+.slider-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slider-prev,
+.slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .client-wrap {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    display: grid;
-    place-items: center;
     background: #f5f5f5;
     overflow: hidden;
 }
 
 .client-wrap h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 2rem;
     color: #555;
+    margin-top: 10px;
 }
 
 .client-wrap hr {
@@ -36,20 +124,57 @@
     height: 8px;
     border: none;
     background: #26ccca;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 10px auto;
 }
 
-.client-in {
-    display: inline-block;
+.client-infinity {
+    display: flex;
+    overflow: hidden;
     white-space: nowrap;
-    animation: 5s;
-    -webkit-animation: 10s slide infinite linear;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.client-in img {
-    height: 100px;
-    margin: 0 10px;
+.client-inner {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+    -webkit-animation: scroll-left 20s linear infinite;
 }
+
+.client-inner img {
+    height: 100px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+/* Animasikan scroll ke kiri */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mengatur jarak untuk layar kecil */
+@media (max-width: 768px) {
+    .client-inner img {
+        height: 80px;
+        margin: 0 10px;
+    }
+}
+
+/* Menghentikan animasi saat hover */
+.paused .client-inner {
+    animation: none;
+}
+
+/* Mengaktifkan gaya saat sedang menggulir */
+.scrolling .client-inner {
+    cursor: grab;
+}
+
+
 

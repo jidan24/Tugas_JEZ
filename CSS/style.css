@@ -113,14 +113,22 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.just-text {
+.slider-text {
     position: relative;
     font-size: 14px;
-    bottom: 170px;
+    bottom: 200px;
     right: 9px;
-    
 }
 
+.list-content{
+    list-style: square;
+}
+
+.heading-content{
+    font-size: 50px;
+    position: relative;
+    bottom: 60px;
+}
 .client-wrap {
     padding: 0;
     margin: 0;
@@ -165,106 +173,127 @@
     cursor: pointer;
 }
 
-.img-team {
-    float: left;
-    width: 100%;
-    position: relative;
-    left: 2%;
-    margin-bottom: 20px;
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
 }
 
 .h1-team {
-    position: relative;
-    left: 18%;
-    margin-top: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-team {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .text-team {
-    position: relative;
-    left: 14%;
-    top: 20%;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.container{
-	max-width: 1170px;
-	margin:auto;
+.btn-career {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-.row{
-	display: flex;
-	flex-wrap: wrap;
+
+.btn-career:hover {
+    background-color: #ddd;
 }
+
 ul{
 	list-style: none;
 }
-.footer{
-	background-color: #3d3e3f;
-    padding: 70px 0;
-}
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-/* .footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-} */
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+
+/* FOOTER START */
+.footer {
+    background-color: #c5c8cc;
+    padding: 40px 0;
+    color: #ffffff;
 }
 
-.img-footer-ig {
-    width: 20px;
-    position: relative;
-    right: 1%;
+.footer .container {
+    max-width: 1140px;
 }
-.img-footer-mail {
-    width: 20px;
-    position: relative;
+
+
+.footer-col {
+    padding: 0 15px;
 }
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #000000;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.footer-map iframe {
+    border: 0;
+    border-radius: 8px;
+}
+/* FOOTER END */
+
+
 /* Animasikan scroll ke kiri */
 @keyframes scroll-left {
     0% {
@@ -286,6 +315,8 @@ ul{
         margin-bottom: 30px;
     }
 }
+
+
 
 /* Menghentikan animasi saat hover */
 .paused .client-inner {

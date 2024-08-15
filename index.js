@@ -84,7 +84,17 @@ function handleMouseMove(e) {
 }
 
 //ONCLICK
-function myFunction() {
-    alert("aku adalah brand" + Myimg );
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    // Ambil semua gambar dengan data-name
+    const images = document.querySelectorAll('.client-inner img');
+
+    // Tambahkan event listener pada setiap gambar
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            const brandName = this.getAttribute('data-name');
+            alert(brandName);
+        });
+    });
+});
+
 
